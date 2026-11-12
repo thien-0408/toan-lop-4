@@ -3,29 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ôn Tập & Khám Phá Đại Lượng - Toán Lớp 4 (Kết Nối Tri Thức)</title>
+  <title>Phiếu Bài Tập Toán Lớp 4 - Kết Nối Tri Thức</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #3b82f6;
+      --primary: #2563eb;
       --primary-dark: #1d4ed8;
-      --secondary: #10b981;
-      --accent: #f59e0b;
-      --purple: #8b5cf6;
-      --rose: #f43f5e;
-      --bg-page: #f8fafc;
-      --bg-card: #ffffff;
-      --text-main: #1e293b;
+      --secondary: #059669;
+      --accent: #d97706;
+      --purple: #7c3aed;
+      --rose: #e11d48;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #cbd5e1;
+      --text: #0f172a;
       --text-muted: #64748b;
-      --border: #e2e8f0;
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
-      --shadow-md: 0 8px 16px -2px rgba(0,0,0,0.06), 0 4px 6px -2px rgba(0,0,0,0.04);
-      --shadow-lg: 0 16px 30px -4px rgba(0,0,0,0.08);
     }
 
     * {
@@ -37,386 +34,139 @@
 
     body {
       font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg-page);
-      color: var(--text-main);
+      background-color: var(--bg);
+      color: var(--text);
       line-height: 1.6;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
     }
 
-    /* HEADER & BANNER */
-    .hero-banner {
-      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+    /* HEADER */
+    .header-card {
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
       color: #ffffff;
-      padding: 36px 20px 48px;
+      padding: 30px 20px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom-left-radius: 32px;
-      border-bottom-right-radius: 32px;
-      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25);
     }
 
-    .hero-banner::before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 220px;
-      height: 220px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-    }
-
-    .hero-badge {
+    .badge-sub {
       display: inline-block;
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(8px);
-      padding: 6px 16px;
+      padding: 4px 14px;
       border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 800;
       letter-spacing: 0.5px;
-      margin-bottom: 12px;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .hero-title {
-      font-size: 2.2rem;
+    .header-title {
+      font-size: 1.95rem;
       font-weight: 900;
       line-height: 1.3;
-      margin-bottom: 12px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      margin-bottom: 8px;
     }
 
-    .hero-sub {
-      font-size: 1.1rem;
-      max-width: 760px;
-      margin: 0 auto;
+    .header-desc {
+      font-size: 1rem;
+      max-width: 740px;
+      margin: 0 auto 16px;
       opacity: 0.95;
       font-weight: 600;
     }
 
-    /* NAVIGATION TABS */
-    .nav-container {
-      max-width: 1080px;
-      margin: -24px auto 28px;
-      padding: 0 16px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .nav-tabs {
+    .student-info-bar {
       display: flex;
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 8px;
-      box-shadow: var(--shadow-lg);
-      gap: 6px;
-      overflow-x: auto;
-      scrollbar-width: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 650px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
     }
-    .nav-tabs::-webkit-scrollbar { display: none; }
 
-    .tab-btn {
-      flex: 1;
-      min-width: 130px;
-      padding: 12px 14px;
-      border: none;
-      background: transparent;
+    .info-input {
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 6px 12px;
       font-family: inherit;
       font-size: 0.95rem;
       font-weight: 700;
-      color: var(--text-muted);
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      white-space: nowrap;
+      color: #1e293b;
+      outline: none;
     }
 
-    .tab-btn:hover {
-      color: var(--primary);
-      background-color: #f1f5f9;
-    }
-
-    .tab-btn.active {
-      background: var(--primary);
-      color: #ffffff;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
-    }
-
-    /* MAIN CONTAINER */
+    /* CONTAINER */
     .container {
-      max-width: 1080px;
-      margin: 0 auto;
+      max-width: 960px;
+      margin: 24px auto 0;
       padding: 0 16px;
     }
 
-    /* CARD STYLES */
-    .section-card {
-      background: var(--bg-card);
+    /* SECTION CARD */
+    .section-box {
+      background: var(--card-bg);
       border-radius: var(--radius-lg);
-      padding: 28px 24px;
-      margin-bottom: 28px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 24px 22px;
+      margin-bottom: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
 
-    .section-header {
+    .section-title-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-      padding-bottom: 14px;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
       border-bottom: 2px solid #f1f5f9;
     }
 
-    .section-icon {
-      width: 44px;
-      height: 44px;
+    .sec-badge {
+      font-size: 1.35rem;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
       flex-shrink: 0;
     }
 
-    .icon-blue { background: #dbeafe; color: #1e40af; }
-    .icon-green { background: #d1fae5; color: #065f46; }
-    .icon-amber { background: #fef3c7; color: #92400e; }
-    .icon-purple { background: #ede9fe; color: #5b21b6; }
-    .icon-rose { background: #ffe4e6; color: #9f1239; }
+    .sec-badge.blue { background: #dbeafe; color: #1e40af; }
+    .sec-badge.amber { background: #fef3c7; color: #92400e; }
+    .sec-badge.green { background: #d1fae5; color: #065f46; }
+    .sec-badge.purple { background: #ede9fe; color: #5b21b6; }
+    .sec-badge.rose { background: #ffe4e6; color: #9f1239; }
 
-    .section-title {
-      font-size: 1.45rem;
+    .sec-heading {
+      font-size: 1.25rem;
       font-weight: 800;
       color: #0f172a;
     }
 
-    .section-subtitle {
+    .sec-sub {
       font-size: 0.9rem;
       color: var(--text-muted);
       font-weight: 600;
     }
 
-    /* UNIT TABLES */
-    .table-wrapper {
-      overflow-x: auto;
-      margin: 18px 0;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-    }
-
-    table.unit-table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center;
-      font-size: 0.95rem;
-      background: #ffffff;
-    }
-
-    table.unit-table th, table.unit-table td {
-      padding: 12px 14px;
-      border: 1px solid #cbd5e1;
-    }
-
-    table.unit-table th {
-      background: #f1f5f9;
-      color: #1e293b;
-      font-weight: 800;
-      font-size: 1rem;
-    }
-
-    table.unit-table tr.highlight-row {
-      background: #f8fafc;
-      font-weight: 700;
-    }
-
-    table.unit-table .target-unit {
-      background: #fef08a;
-      font-weight: 800;
-      color: #854d0e;
-    }
-
-    /* TIPS BOX */
-    .tip-box {
-      background: #eff6ff;
-      border-left: 5px solid #3b82f6;
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      padding: 16px 18px;
-      margin: 16px 0;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .tip-box.tip-green {
-      background: #ecfdf5;
-      border-left-color: #10b981;
-    }
-    .tip-box.tip-amber {
-      background: #fffbeb;
-      border-left-color: #f59e0b;
-    }
-    .tip-box.tip-purple {
-      background: #faf5ff;
-      border-left-color: #8b5cf6;
-    }
-
-    .tip-icon {
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .tip-content {
-      font-size: 0.95rem;
-      color: #1e293b;
-    }
-    .tip-content strong {
-      color: #0f172a;
-    }
-
-    /* FLOW DIAGRAMS */
-    .flow-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 16px 0;
-      padding: 16px;
-      background: #f8fafc;
-      border-radius: var(--radius-md);
-      border: 1px dashed #cbd5e1;
-    }
-
-    .flow-unit {
-      background: #ffffff;
-      border: 2px solid var(--primary);
-      padding: 10px 16px;
-      border-radius: var(--radius-md);
-      font-weight: 800;
-      font-size: 1.1rem;
-      color: var(--primary);
-      min-width: 65px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .flow-arrow {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-    .flow-arrow span {
-      color: #ef4444;
-      font-weight: 800;
-      font-size: 0.85rem;
-    }
-
-    /* INTERACTIVE TOOL CARD */
-    .tool-box {
-      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
-      border: 2px dashed #38bdf8;
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      margin: 20px 0;
-    }
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 14px;
-    }
-    .tool-card {
-      background: #ffffff;
-      padding: 18px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-    }
-    .tool-title {
-      font-weight: 800;
-      color: #0369a1;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.05rem;
-    }
-    .tool-input-group {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-    .tool-input {
-      flex: 1;
-      padding: 10px 14px;
-      border: 2px solid #cbd5e1;
-      border-radius: var(--radius-sm);
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 700;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .tool-input:focus {
-      border-color: var(--primary);
-    }
-    .tool-select {
-      padding: 10px 12px;
-      border: 2px solid #cbd5e1;
-      border-radius: var(--radius-sm);
-      font-family: inherit;
-      font-weight: 700;
-      background: #fff;
-    }
-    .tool-btn {
-      padding: 10px 16px;
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: var(--radius-sm);
-      font-family: inherit;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .tool-btn:hover {
-      background: var(--primary-dark);
-    }
-    .tool-result {
-      padding: 10px 12px;
-      background: #f1f5f9;
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #0f172a;
-      min-height: 44px;
-      display: flex;
-      align-items: center;
-    }
-
-    /* EXERCISE STYLES */
-    .exercise-block {
-      margin-top: 24px;
-    }
-
+    /* TRẮC NGHIỆM */
     .q-item {
-      background: #ffffff;
-      border: 1px solid var(--border);
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
       border-radius: var(--radius-md);
-      padding: 18px 20px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-      transition: border-color 0.2s;
+      padding: 16px;
+      margin-bottom: 14px;
+      transition: all 0.2s;
     }
     .q-item:hover {
       border-color: #94a3b8;
@@ -424,38 +174,37 @@
     .q-title {
       font-weight: 700;
       font-size: 1.05rem;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #0f172a;
     }
     .q-num {
       display: inline-block;
-      background: #e2e8f0;
-      color: #334155;
+      background: #3b82f6;
+      color: #ffffff;
       padding: 2px 10px;
       border-radius: 999px;
       font-size: 0.85rem;
       font-weight: 800;
-      margin-right: 8px;
+      margin-right: 6px;
     }
 
-    /* MC OPTIONS */
     .options-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      margin-top: 10px;
+      gap: 8px;
     }
 
     .option-label {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      background: #f8fafc;
-      border: 2px solid #e2e8f0;
-      border-radius: var(--radius-md);
+      gap: 8px;
+      padding: 8px 12px;
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius-sm);
       cursor: pointer;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: all 0.2s;
     }
     .option-label:hover {
@@ -463,54 +212,16 @@
       border-color: #93c5fd;
     }
     .option-label input[type="radio"] {
-      width: 18px;
-      height: 18px;
+      width: 17px;
+      height: 17px;
       cursor: pointer;
     }
 
-    /* FILL IN THE BLANK */
-    .fill-group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin: 8px 0;
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
-    .fill-input {
-      width: 90px;
-      padding: 6px 10px;
-      text-align: center;
-      font-family: inherit;
-      font-size: 1.05rem;
-      font-weight: 800;
-      border: 2px solid #94a3b8;
-      border-radius: var(--radius-sm);
-      outline: none;
-      transition: all 0.2s;
-    }
-    .fill-input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-    }
-    .fill-input.correct {
-      border-color: #10b981;
-      background: #ecfdf5;
-      color: #065f46;
-    }
-    .fill-input.wrong {
-      border-color: #ef4444;
-      background: #fef2f2;
-      color: #991b1b;
-    }
-
-    /* FEEDBACK & EXPLANATION */
     .feedback-box {
-      margin-top: 12px;
-      padding: 10px 14px;
+      margin-top: 10px;
+      padding: 8px 12px;
       border-radius: var(--radius-sm);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       display: none;
     }
@@ -527,11 +238,123 @@
       display: block;
     }
 
-    .explain-text {
-      margin-top: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
+    /* ĐIỀN SỐ & PHÉP TÍNH */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .calc-card {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .calc-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .fill-box {
+      width: 110px;
+      padding: 6px 8px;
+      text-align: center;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 800;
+      border: 2px solid #94a3b8;
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: all 0.2s;
+      background: #ffffff;
+    }
+    .fill-box:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    .fill-box.correct {
+      border-color: #10b981 !important;
+      background: #ecfdf5 !important;
+      color: #065f46 !important;
+    }
+    .fill-box.wrong {
+      border-color: #ef4444 !important;
+      background: #fef2f2 !important;
+      color: #991b1b !important;
+    }
+
+    .fill-short {
+      width: 60px;
+    }
+
+    .unit-group {
+      background: #f8fafc;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      border: 1px dashed #cbd5e1;
+    }
+    .unit-group-title {
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
       color: #475569;
+    }
+
+    /* WORD PROBLEMS */
+    .word-problem {
+      background: #ffffff;
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .wp-header {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .wp-solution-block {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 16px;
+      margin-top: 10px;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: #334155;
+    }
+
+    .wp-step {
+      margin-bottom: 8px;
+    }
+
+    .wp-final-row {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-weight: 800;
+      color: #1e293b;
+      font-size: 1.05rem;
     }
 
     /* ACTION BAR */
@@ -539,26 +362,40 @@
       position: sticky;
       bottom: 16px;
       background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       padding: 14px 20px;
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      max-width: 1080px;
-      margin: 30px auto 0;
-      border: 1px solid #cbd5e1;
+      max-width: 960px;
+      margin: 28px auto 0;
+      border: 1.5px solid #cbd5e1;
       z-index: 99;
     }
 
+    .score-view {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #1e293b;
+      padding: 6px 14px;
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      border: 1px solid #e2e8f0;
+    }
+    .score-view span {
+      color: #2563eb;
+      font-size: 1.35rem;
+    }
+
     .btn {
-      padding: 12px 22px;
+      padding: 12px 20px;
       border-radius: var(--radius-md);
       font-family: inherit;
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 0.95rem;
       border: none;
       cursor: pointer;
       display: inline-flex;
@@ -566,22 +403,22 @@
       gap: 8px;
       transition: all 0.2s;
     }
-    .btn-primary {
+    .btn-submit {
       background: #2563eb;
       color: #ffffff;
       box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     }
-    .btn-primary:hover {
+    .btn-submit:hover {
       background: #1d4ed8;
       transform: translateY(-1px);
     }
-    .btn-secondary {
+    .btn-reset {
       background: #f1f5f9;
       color: #475569;
     }
-    .btn-secondary:hover {
+    .btn-reset:hover {
       background: #e2e8f0;
-      color: #1e293b;
+      color: #0f172a;
     }
     .btn-print {
       background: #10b981;
@@ -591,922 +428,618 @@
       background: #059669;
     }
 
-    .score-badge {
-      font-size: 1.15rem;
-      font-weight: 900;
-      color: #1e293b;
-      padding: 6px 14px;
-      background: #f8fafc;
-      border-radius: var(--radius-sm);
-      border: 1px solid #e2e8f0;
-    }
-    .score-badge span {
-      color: #2563eb;
-      font-size: 1.3rem;
-    }
-
-    /* CENTURY HISTORIC CARDS */
-    .history-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-    .history-card {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      border-radius: var(--radius-md);
-      padding: 14px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .history-card:hover {
-      transform: translateY(-2px);
-    }
-    .history-year {
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: #c2410c;
-    }
-    .history-event {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #1e293b;
-      margin: 4px 0;
-    }
-    .history-century {
-      display: inline-block;
-      background: #f97316;
-      color: #ffffff;
-      padding: 2px 10px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 800;
-    }
-
-    /* WORD PROBLEMS */
-    .problem-box {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
-      border-radius: var(--radius-md);
-      padding: 18px;
-      margin-bottom: 16px;
-    }
-    .problem-content {
-      font-size: 1.05rem;
-      color: #1e293b;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-    .solution-btn {
-      background: none;
-      border: 1px dashed var(--primary);
-      color: var(--primary);
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      margin-top: 8px;
-      transition: all 0.2s;
-    }
-    .solution-btn:hover {
-      background: #eff6ff;
-    }
-    .solution-content {
-      display: none;
-      margin-top: 12px;
-      padding: 14px;
-      background: #ffffff;
-      border-radius: var(--radius-sm);
-      border-left: 4px solid var(--secondary);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-    .solution-content.show {
-      display: block;
-    }
-
-    /* PRINT STYLES */
     @media print {
       body {
         background: #ffffff;
         color: #000000;
         padding-bottom: 0;
       }
-      .hero-banner {
+      .header-card {
         background: none;
         color: #000;
         border-bottom: 2px solid #000;
-        border-radius: 0;
         padding: 10px 0;
         box-shadow: none;
       }
-      .nav-container, .action-bar, .tool-box, .btn, .solution-btn {
+      .student-info-bar {
+        background: none;
+        border: 1px solid #000;
+      }
+      .action-bar, .btn {
         display: none !important;
       }
-      .section-card {
+      .section-box {
         box-shadow: none;
         border: 1px solid #ccc;
         page-break-inside: avoid;
-        margin-bottom: 16px;
-        padding: 14px;
+        margin-bottom: 14px;
+        padding: 12px;
       }
-      .solution-content {
-        display: block !important;
-        border: 1px solid #ddd;
-        background: #f9f9f9;
-      }
-      .tab-content {
-        display: block !important;
-      }
-      .fill-input {
-        border-bottom: 1px solid #000 !important;
-        border-top: none; border-left: none; border-right: none;
+      .fill-box {
+        border-bottom: 1.5px solid #000 !important;
+        border-top: none !important; border-left: none !important; border-right: none !important;
         border-radius: 0;
+        background: transparent !important;
       }
     }
 
     @media (max-width: 640px) {
-      .hero-title { font-size: 1.6rem; }
-      .section-card { padding: 18px 14px; }
+      .header-title { font-size: 1.5rem; }
       .action-bar { flex-direction: column; align-items: stretch; }
       .action-bar .btn { justify-content: center; }
+      .options-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- BANNER -->
-  <header class="hero-banner">
-    <div class="hero-badge">Toán Lớp 4 • Bộ Sách Kết Nối Tri Thức Với Cuộc Sống</div>
-    <h1 class="hero-title">Ôn Tập & Khám Phá Các Đơn Vị Đo Đại Lượng</h1>
-    <p class="hero-sub">
-      Hệ thống hóa toàn bộ kiến thức: <strong>Khối lượng</strong> (yến, tạ, tấn), <strong>Diện tích</strong> (m², dm², mm²), 
-      <strong>Độ dài</strong> (m, dm, cm, mm) và khám phá kiến thức mới: <strong>Giây & Thế kỉ</strong>!
+  <!-- BANNER / TIÊU ĐỀ -->
+  <header class="header-card">
+    <div class="badge-sub">Phiếu Bài Tập Tự Luyện • Toán Lớp 4 (KNTT)</div>
+    <h1 class="header-title">ÔN TẬP ĐẠI LƯỢNG & RÈN LUYỆN 4 PHÉP TÍNH</h1>
+    <p class="header-desc">
+      Khối lượng (yến, tạ, tấn) • Diện tích (m², dm², mm²) • Độ dài • Giây & Thế kỉ • Luyện tập Phép Trừ, Phép Nhân & Đặc biệt là Phép Chia (Phạm vi 100 000)
     </p>
-  </header>
-
-  <!-- NAVIGATION TABS -->
-  <div class="nav-container">
-    <div class="nav-tabs">
-      <button class="tab-btn active" onclick="switchTab('theory-tab')">
-        <span>📖</span> Bảng Lý Thuyết
-      </button>
-      <button class="tab-btn" onclick="switchTab('time-tab')">
-        <span>⏳</span> Giây & Thế Kỉ (Mới)
-      </button>
-      <button class="tab-btn" onclick="switchTab('tools-tab')">
-        <span>🧮</span> Máy Chuyển Đổi Mini
-      </button>
-      <button class="tab-btn" onclick="switchTab('exercises-tab')">
-        <span>✏️</span> Phiếu Bài Tập Tự Luyện
-      </button>
+    <div class="student-info-bar">
+      <span>Họ và tên: <input type="text" class="info-input" placeholder="Nhập tên em..." style="width: 180px;"></span>
+      <span>Lớp: <input type="text" class="info-input" placeholder="4A..." style="width: 80px;"></span>
+      <span>Ngày: <input type="text" class="info-input" value="Hôm nay" style="width: 100px;"></span>
     </div>
-  </div>
+  </header>
 
   <main class="container">
 
-    <!-- ========================================== -->
-    <!-- TAB 1: BẢNG LÝ THUYẾT & GHI NHỚ NHANH      -->
-    <!-- ========================================== -->
-    <section id="theory-tab" class="tab-content">
-      
-      <!-- PHẦN 1: KHỐI LƯỢNG (YẾN, TẠ, TẤN) -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-amber">⚖️</div>
-          <div>
-            <h2 class="section-title">1. Đơn vị đo khối lượng: Yến, Tạ, Tấn</h2>
-            <p class="section-subtitle">Dùng để cân các vật nặng (bao gạo to, con voi, xe tải chở hàng...)</p>
+    <!-- ======================================================== -->
+    <!-- PHẦN 1: TRẮC NGHIỆM ĐẠI LƯỢNG (SỐ MỚI)                   -->
+    <!-- ======================================================== -->
+    <div class="section-box">
+      <div class="section-title-wrap">
+        <div class="sec-badge blue">🎯</div>
+        <div>
+          <h2 class="sec-heading">Phần 1: Trắc Nghiệm Đại Lượng</h2>
+          <p class="sec-sub">Khoanh tròn vào chữ cái A, B, C hoặc D trước câu trả lời đúng</p>
+        </div>
+      </div>
+
+      <div id="mc-group">
+
+        <!-- Câu 1 -->
+        <div class="q-item" data-q="q1" data-ans="B">
+          <div class="q-title"><span class="q-num">Câu 1</span> Một con hà mã nặng 3 tấn 2 tạ. Hỏi con hà mã đó nặng bao nhiêu tạ?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q1" value="A"> A. 30 tạ</label>
+            <label class="option-label"><input type="radio" name="q1" value="B"> B. 32 tạ</label>
+            <label class="option-label"><input type="radio" name="q1" value="C"> C. 320 tạ</label>
+            <label class="option-label"><input type="radio" name="q1" value="D"> D. 302 tạ</label>
           </div>
+          <div class="feedback-box"></div>
         </div>
 
-        <div class="table-wrapper">
-          <table class="unit-table">
-            <thead>
-              <tr>
-                <th colspan="3" style="background:#fef3c7; color:#92400e;">Lớn hơn ki-lô-gam</th>
-                <th class="target-unit">Đơn vị chuẩn</th>
-                <th colspan="3" style="background:#f1f5f9;">Bé hơn ki-lô-gam</th>
-              </tr>
-              <tr>
-                <th style="width: 14%;">TẤN</th>
-                <th style="width: 14%;">TẠ</th>
-                <th style="width: 14%;">YẾN</th>
-                <th class="target-unit" style="width: 16%;">KI-LÔ-GAM (kg)</th>
-                <th style="width: 14%;">Héc-tô-gam (hg)</th>
-                <th style="width: 14%;">Đề-ca-gam (dag)</th>
-                <th style="width: 14%;">GAM (g)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <td><strong>1 tấn</strong><br>= 10 tạ<br>= 1 000 kg</td>
-                <td><strong>1 tạ</strong><br>= 10 yến<br>= 100 kg</td>
-                <td><strong>1 yến</strong><br>= 10 kg</td>
-                <td class="target-unit"><strong>1 kg</strong><br>= 10 hg<br>= 1 000 g</td>
-                <td>1 hg<br>= 10 dag<br>= 100 g</td>
-                <td>1 dag<br>= 10 g</td>
-                <td><strong>1 g</strong></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Câu 2 -->
+        <div class="q-item" data-q="q2" data-ans="C">
+          <div class="q-title"><span class="q-num">Câu 2</span> Bác nông dân thu hoạch được 1 tạ 5 yến thóc. Hỏi bác thu hoạch được tất cả bao nhiêu ki-lô-gam thóc?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q2" value="A"> A. 15 kg</label>
+            <label class="option-label"><input type="radio" name="q2" value="B"> B. 105 kg</label>
+            <label class="option-label"><input type="radio" name="q2" value="C"> C. 150 kg</label>
+            <label class="option-label"><input type="radio" name="q2" value="D"> D. 1 500 kg</label>
+          </div>
+          <div class="feedback-box"></div>
         </div>
 
-        <div class="flow-row">
-          <div class="flow-unit">Tấn</div>
-          <div class="flow-arrow"><span>× 10</span> ➔ </div>
-          <div class="flow-unit">Tạ</div>
-          <div class="flow-arrow"><span>× 10</span> ➔ </div>
-          <div class="flow-unit">Yến</div>
-          <div class="flow-arrow"><span>× 10</span> ➔ </div>
-          <div class="flow-unit" style="border-color: #f59e0b; background:#fef3c7;">kg</div>
-          <div class="flow-arrow"><span>× 1000</span> ➔ </div>
-          <div class="flow-unit">g</div>
+        <!-- Câu 3 -->
+        <div class="q-item" data-q="q3" data-ans="A">
+          <div class="q-title"><span class="q-num">Câu 3</span> Diện tích của một viên gạch lát nền là 4 dm². Diện tích đó bằng bao nhiêu xăng-ti-mét vuông?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q3" value="A"> A. 400 cm²</label>
+            <label class="option-label"><input type="radio" name="q3" value="B"> B. 40 cm²</label>
+            <label class="option-label"><input type="radio" name="q3" value="C"> C. 4 000 cm²</label>
+            <label class="option-label"><input type="radio" name="q3" value="D"> D. 40 000 cm²</label>
+          </div>
+          <div class="feedback-box"></div>
         </div>
 
-        <div class="tip-box tip-amber">
-          <div class="tip-icon">💡</div>
-          <div class="tip-content">
-            <strong>Mẹo thần chú dễ nhớ:</strong><br>
-            • <strong>1 tấn</strong> = <strong>1 000 kg</strong> (3 chữ số 0) — Ví dụ: Con voi nặng khoảng 3 đến 5 tấn.<br>
-            • <strong>1 tạ</strong> = <strong>100 kg</strong> (2 chữ số 0) — Ví dụ: Con lợn to nặng khoảng 1 tạ.<br>
-            • <strong>1 yến</strong> = <strong>10 kg</strong> (1 chữ số 0) — Ví dụ: Một bao gạo nhỏ ăn trong gia đình nặng 1 yến.
+        <!-- Câu 4 -->
+        <div class="q-item" data-q="q4" data-ans="D">
+          <div class="q-title"><span class="q-num">Câu 4</span> Điền số thích hợp: 9 m² 25 dm² = ... dm²</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q4" value="A"> A. 9250 dm²</label>
+            <label class="option-label"><input type="radio" name="q4" value="B"> B. 9025 dm²</label>
+            <label class="option-label"><input type="radio" name="q4" value="C"> C. 952 dm²</label>
+            <label class="option-label"><input type="radio" name="q4" value="D"> D. 925 dm²</label>
+          </div>
+          <div class="feedback-box"></div>
+        </div>
+
+        <!-- Câu 5 -->
+        <div class="q-item" data-q="q5" data-ans="B">
+          <div class="q-title"><span class="q-num">Câu 5</span> Một vận động viên bơi hết 1 phút 25 giây. Thời gian vận động viên đó bơi tính bằng giây là:</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q5" value="A"> A. 125 giây</label>
+            <label class="option-label"><input type="radio" name="q5" value="B"> B. 85 giây</label>
+            <label class="option-label"><input type="radio" name="q5" value="C"> C. 75 giây</label>
+            <label class="option-label"><input type="radio" name="q5" value="D"> D. 95 giây</label>
+          </div>
+          <div class="feedback-box"></div>
+        </div>
+
+        <!-- Câu 6 -->
+        <div class="q-item" data-q="q6" data-ans="C">
+          <div class="q-title"><span class="q-num">Câu 6</span> Năm 1428, khởi nghĩa Lam Sơn toàn thắng, Lê Lợi lên ngôi vua. Năm đó thuộc thế kỉ nào?</div>
+          <div class="options-grid">
+            <label class="option-label"><input type="radio" name="q6" value="A"> A. Thế kỉ XIV</label>
+            <label class="option-label"><input type="radio" name="q6" value="B"> B. Thế kỉ XVI</label>
+            <label class="option-label"><input type="radio" name="q6" value="C"> C. Thế kỉ XV</label>
+            <label class="option-label"><input type="radio" name="q6" value="D"> D. Thế kỉ XIII</label>
+          </div>
+          <div class="feedback-box"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 2: ĐIỀN SỐ VÀO CHỖ CHẤM (ĐỔI ĐƠN VỊ - SỐ MỚI)       -->
+    <!-- ======================================================== -->
+    <div class="section-box">
+      <div class="section-title-wrap">
+        <div class="sec-badge amber">⚖️</div>
+        <div>
+          <h2 class="sec-heading">Phần 2: Điền Số Thích Hợp Vào Chỗ Chấm</h2>
+          <p class="sec-sub">Rèn luyện chuyển đổi các đơn vị đo đại lượng (Khối lượng, diện tích, độ dài, thời gian)</p>
+        </div>
+      </div>
+
+      <div class="unit-group">
+        <div class="unit-group-title">a) Đơn vị đo khối lượng:</div>
+        <div class="calc-grid">
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>7 yến = </span>
+              <input type="text" class="fill-box" data-ans="70">
+              <span>kg</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>9 tạ = </span>
+              <input type="text" class="fill-box" data-ans="900">
+              <span>kg</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>6 tấn = </span>
+              <input type="text" class="fill-box" data-ans="60">
+              <span>tạ = </span>
+              <input type="text" class="fill-box" data-ans="6000">
+              <span>kg</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>4 tạ 60 kg = </span>
+              <input type="text" class="fill-box" data-ans="460">
+              <span>kg</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>5 tấn 8 yến = </span>
+              <input type="text" class="fill-box" data-ans="5080">
+              <span>kg</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- PHẦN 2: DIỆN TÍCH (m2, dm2, cm2, mm2) -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-green">📐</div>
-          <div>
-            <h2 class="section-title">2. Đơn vị đo diện tích: mm², cm², dm², m²</h2>
-            <p class="section-subtitle">Đo diện tích mặt phẳng: mặt bàn, bìa sách, phòng học, cánh đồng...</p>
+      <div class="unit-group">
+        <div class="unit-group-title">b) Đơn vị đo diện tích & độ dài:</div>
+        <div class="calc-grid">
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>8 m² = </span>
+              <input type="text" class="fill-box" data-ans="800">
+              <span>dm²</span>
+            </div>
           </div>
-        </div>
-
-        <div class="table-wrapper">
-          <table class="unit-table">
-            <thead>
-              <tr style="background:#ecfdf5;">
-                <th style="width: 25%;">Mét vuông (m²)</th>
-                <th style="width: 25%;">Đề-xi-mét vuông (dm²)</th>
-                <th style="width: 25%;">Xăng-ti-mét vuông (cm²)</th>
-                <th style="width: 25%;">Mi-li-mét vuông (mm²)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Là diện tích hình vuông cạnh <strong>1 m</strong></td>
-                <td>Là diện tích hình vuông cạnh <strong>1 dm</strong> (10 cm)</td>
-                <td>Là diện tích hình vuông cạnh <strong>1 cm</strong> (10 mm)</td>
-                <td>Là diện tích hình vuông cạnh <strong>1 mm</strong></td>
-              </tr>
-              <tr class="highlight-row">
-                <td style="color:#059669;">
-                  <strong>1 m²</strong><br>= 100 dm²<br>= 10 000 cm²
-                </td>
-                <td style="color:#0d9488;">
-                  <strong>1 dm²</strong><br>= 100 cm²<br>= 10 000 mm²
-                </td>
-                <td style="color:#2563eb;">
-                  <strong>1 cm²</strong><br>= 100 mm²
-                </td>
-                <td style="color:#475569;">
-                  <strong>1 mm²</strong><br>(rất nhỏ, cỡ đầu tăm)
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="flow-row">
-          <div class="flow-unit" style="border-color:#10b981;">m²</div>
-          <div class="flow-arrow"><span>× 100</span> ➔ </div>
-          <div class="flow-unit" style="border-color:#10b981;">dm²</div>
-          <div class="flow-arrow"><span>× 100</span> ➔ </div>
-          <div class="flow-unit" style="border-color:#10b981;">cm²</div>
-          <div class="flow-arrow"><span>× 100</span> ➔ </div>
-          <div class="flow-unit" style="border-color:#10b981;">mm²</div>
-        </div>
-
-        <div class="tip-box tip-green">
-          <div class="tip-icon">🌟</div>
-          <div class="tip-content">
-            <strong>Quy tắc vàng của Đơn vị diện tích:</strong><br>
-            • Mỗi đơn vị diện tích lớn <strong>gấp 100 lần</strong> đơn vị bé tiếp liền (thêm <strong>2 chữ số 0</strong>).<br>
-            • Mỗi đơn vị diện tích bé <strong>bằng 1/100</strong> đơn vị lớn tiếp liền (bớt <strong>2 chữ số 0</strong>).<br>
-            • <em>Lưu ý phân biệt:</em> Đơn vị độ dài (m, dm, cm) cách nhau <strong>10 lần</strong>, còn đơn vị diện tích có số mũ 2 (m², dm², cm²) cách nhau <strong>100 lần</strong>!
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>5 dm² = </span>
+              <input type="text" class="fill-box" data-ans="500">
+              <span>cm²</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>7 cm² 40 mm² = </span>
+              <input type="text" class="fill-box" data-ans="740">
+              <span>mm²</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>12 m² 8 dm² = </span>
+              <input type="text" class="fill-box" data-ans="1208">
+              <span>dm²</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>7 m 4 dm = </span>
+              <input type="text" class="fill-box" data-ans="740">
+              <span>cm</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>9 km 50 m = </span>
+              <input type="text" class="fill-box" data-ans="9050">
+              <span>m</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- PHẦN 3: ĐỘ DÀI (km, m, dm, cm, mm) -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-blue">📏</div>
-          <div>
-            <h2 class="section-title">3. Đơn vị đo độ dài: km, m, dm, cm, mm</h2>
-            <p class="section-subtitle">Đo chiều dài đoạn thẳng, khoảng cách, chiều cao...</p>
+      <div class="unit-group">
+        <div class="unit-group-title">c) Đơn vị đo thời gian (Giây & Thế kỉ):</div>
+        <div class="calc-grid">
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>3 phút = </span>
+              <input type="text" class="fill-box" data-ans="180">
+              <span>giây</span>
+            </div>
           </div>
-        </div>
-
-        <div class="table-wrapper">
-          <table class="unit-table">
-            <thead>
-              <tr style="background:#eff6ff;">
-                <th>Ki-lô-mét (km)</th>
-                <th>Héc-tô-mét (hm)</th>
-                <th>Đề-ca-mét (dam)</th>
-                <th class="target-unit">MÉT (m)</th>
-                <th>Đề-xi-mét (dm)</th>
-                <th>Xăng-ti-mét (cm)</th>
-                <th>Mi-li-mét (mm)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <td><strong>1 km</strong><br>= 1 000 m</td>
-                <td>1 hm<br>= 100 m</td>
-                <td>1 dam<br>= 10 m</td>
-                <td class="target-unit"><strong>1 m</strong><br>= 10 dm<br>= 100 cm<br>= 1 000 mm</td>
-                <td><strong>1 dm</strong><br>= 10 cm<br>= 100 mm</td>
-                <td><strong>1 cm</strong><br>= 10 mm</td>
-                <td><strong>1 mm</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="tip-box">
-          <div class="tip-icon">📌</div>
-          <div class="tip-content">
-            <strong>Mối quan hệ cần thuộc làu:</strong><br>
-            • Hai đơn vị đo độ dài liền kề nhau gấp hoặc kém nhau <strong>10 lần</strong>.<br>
-            • 1 km = 1000 m | 1 m = 10 dm = 100 cm = 1000 mm | 1 dm = 10 cm = 100 mm | 1 cm = 10 mm.
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>2 phút 45 giây = </span>
+              <input type="text" class="fill-box" data-ans="165">
+              <span>giây</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>1/3 phút = </span>
+              <input type="text" class="fill-box" data-ans="20">
+              <span>giây</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>5 thế kỉ = </span>
+              <input type="text" class="fill-box" data-ans="500">
+              <span>năm</span>
+            </div>
+          </div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>1/5 thế kỉ = </span>
+              <input type="text" class="fill-box" data-ans="20">
+              <span>năm</span>
+            </div>
           </div>
         </div>
       </div>
 
-    </section>
+    </div>
 
-    <!-- ========================================== -->
-    <!-- TAB 2: KIẾN THỨC MỚI: GIÂY & THẾ KỈ       -->
-    <!-- ========================================== -->
-    <section id="time-tab" class="tab-content" style="display: none;">
-      
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-purple">⏱️</div>
-          <div>
-            <h2 class="section-title">Kiến thức mới: Giây (Second)</h2>
-            <p class="section-subtitle">Đơn vị đo thời gian rất ngắn, dùng bấm giờ thể thao, nhịp đập tim, chạy nước rút...</p>
-          </div>
-        </div>
-
-        <div class="flow-row">
-          <div class="flow-unit" style="border-color:#8b5cf6;">1 Giờ</div>
-          <div class="flow-arrow"><span>= 60 phút</span> ➔ </div>
-          <div class="flow-unit" style="border-color:#8b5cf6;">1 Phút</div>
-          <div class="flow-arrow"><span>= 60 giây</span> ➔ </div>
-          <div class="flow-unit" style="border-color:#8b5cf6; background:#ede9fe;">60 Giây</div>
-        </div>
-
-        <div class="tip-box tip-purple">
-          <div class="tip-icon">⚡</div>
-          <div class="tip-content">
-            <strong>Các công thức đổi thời gian quan trọng:</strong><br>
-            • <strong>1 phút = 60 giây</strong><br>
-            • <strong>1 giờ = 60 phút = 3 600 giây</strong> (vì 60 × 60 = 3600)<br>
-            • 1/2 phút = 30 giây | 1/4 phút = 15 giây | 1/3 phút = 20 giây | 1/5 phút = 12 giây.<br>
-            • Kim giây trên đồng hồ quay đúng 1 vòng (60 vạch) thì kim phút nhích được đúng 1 vạch (1 phút).
-          </div>
+    <!-- ======================================================== -->
+    <!-- PHẦN 3: SO SÁNH (> , < , =)                              -->
+    <!-- ======================================================== -->
+    <div class="section-box">
+      <div class="section-title-wrap">
+        <div class="sec-badge green">⚖️</div>
+        <div>
+          <h2 class="sec-heading">Phần 3: Điền Dấu ( &gt; , &lt; , = ) Thích Hợp</h2>
+          <p class="sec-sub">Đổi về cùng đơn vị đo trước khi điền dấu so sánh</p>
         </div>
       </div>
 
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-rose">🏛️</div>
-          <div>
-            <h2 class="section-title">Kiến thức mới: Thế Kỉ (Century)</h2>
-            <p class="section-subtitle">Đơn vị đo khoảng thời gian dài trong lịch sử</p>
+      <div class="calc-grid">
+        <div class="calc-card">
+          <div class="calc-row">
+            <span>6 tấn 2 tạ &nbsp;</span>
+            <input type="text" class="fill-box fill-short" data-ans=">">
+            <span>&nbsp; 620 kg</span>
           </div>
         </div>
-
-        <div class="tip-box tip-amber">
-          <div class="tip-icon">👑</div>
-          <div class="tip-content" style="font-size: 1.05rem;">
-            <strong>Quy ước thế kỉ trong Toán học:</strong><br>
-            • <strong>1 thế kỉ = 100 năm</strong>.<br>
-            • Thế kỉ được viết bằng các <strong>chữ số La Mã</strong> (I, II, III, IV, V, VI, VII, VIII, IX, X, XI, ..., XX, XXI).<br>
-            • <strong>Thế kỉ I</strong> tính từ năm <strong>1</strong> đến năm <strong>100</strong>.<br>
-            • <strong>Thế kỉ II</strong> tính từ năm <strong>101</strong> đến năm <strong>200</strong>.<br>
-            • ...<br>
-            • <strong>Thế kỉ XX</strong> tính từ năm <strong>1901</strong> đến năm <strong>2000</strong>.<br>
-            • <strong>Thế kỉ XXI</strong> tính từ năm <strong>2001</strong> đến năm <strong>2100</strong> (Hiện tại chúng ta đang ở thế kỉ XXI!).
+        <div class="calc-card">
+          <div class="calc-row">
+            <span>4 m² 8 dm² &nbsp;</span>
+            <input type="text" class="fill-box fill-short" data-ans="<">
+            <span>&nbsp; 480 dm²</span>
           </div>
         </div>
-
-        <!-- MẸO TÍNH THẾ KỈ NHANH NHƯ CHỚP -->
-        <div style="background: #fff1f2; border: 2px solid #fda4af; border-radius: var(--radius-md); padding: 18px; margin: 18px 0;">
-          <h3 style="color: #be123c; margin-bottom: 8px; font-weight: 800; font-size: 1.15rem;">
-            🎯 BÍ KÍP TÍNH NHANH: "Năm nay thuộc thế kỉ nào?"
-          </h3>
-          <p style="font-size: 1rem; margin-bottom: 8px;">Quan sát <strong>hai chữ số cuối cùng</strong> của năm:</p>
-          <ul style="padding-left: 20px; font-weight: 700; line-height: 1.8;">
-            <li>
-              <strong>Trường hợp 1 (Tận cùng là 00):</strong> Bỏ 2 số 00 đi, các chữ số còn lại chính là số thế kỉ!<br>
-              <em>Ví dụ:</em> Năm 20<strong>00</strong> ➔ Bỏ 00 còn <strong>20</strong> ➔ Thế kỉ <strong>XX</strong>.<br>
-              <em>Ví dụ:</em> Năm 15<strong>00</strong> ➔ Bỏ 00 còn <strong>15</strong> ➔ Thế kỉ <strong>XV</strong>.
-            </li>
-            <li>
-              <strong>Trường hợp 2 (Tận cùng KHÁC 00):</strong> Bỏ 2 số cuối đi, lấy phần số phía trước <strong>CỘNG THÊM 1</strong>!<br>
-              <em>Ví dụ 1:</em> Năm 20<strong>24</strong> ➔ Phần trước là 20 ➔ Lấy 20 + 1 = <strong>21</strong> ➔ Thế kỉ <strong>XXI</strong>.<br>
-              <em>Ví dụ 2:</em> Năm 19<strong>45</strong> ➔ Phần trước là 19 ➔ Lấy 19 + 1 = <strong>20</strong> ➔ Thế kỉ <strong>XX</strong>.<br>
-              <em>Ví dụ 3:</em> Năm 9<strong>38</strong> ➔ Phần trước là 9 ➔ Lấy 9 + 1 = <strong>10</strong> ➔ Thế kỉ <strong>X</strong>.<br>
-              <em>Ví dụ 4:</em> Năm <strong>40</strong> (chỉ có 2 chữ số) ➔ Lấy 0 + 1 = <strong>1</strong> ➔ Thế kỉ <strong>I</strong>.
-            </li>
-          </ul>
-        </div>
-
-        <!-- BẢNG LA MÃ NHANH -->
-        <h4 style="font-weight: 800; margin: 16px 0 8px; color: #334155;">Bảng đối chiếu chữ số La Mã hay dùng cho Thế Kỉ:</h4>
-        <div class="table-wrapper">
-          <table class="unit-table">
-            <thead>
-              <tr style="background:#f1f5f9;">
-                <th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th><th>VI</th><th>VII</th><th>VIII</th><th>IX</th><th>X</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
-              </tr>
-            </tbody>
-            <thead>
-              <tr style="background:#f1f5f9;">
-                <th>XI</th><th>XII</th><th>XIII</th><th>XIV</th><th>XV</th><th>XVI</th><th>XVII</th><th>XVIII</th><th>XIX</th><th>XX</th><th>XXI</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- MỐC LỊCH SỬ NỔI BẬT VIỆT NAM -->
-        <h4 style="font-weight: 800; margin: 20px 0 8px; color: #334155;">Em yêu Lịch sử Việt Nam qua các Thế Kỉ:</h4>
-        <div class="history-grid">
-          <div class="history-card">
-            <div class="history-year">Năm 40</div>
-            <div class="history-event">Khởi nghĩa Hai Bà Trưng</div>
-            <div class="history-century">Thế kỉ I</div>
-          </div>
-          <div class="history-card">
-            <div class="history-year">Năm 938</div>
-            <div class="history-event">Ngô Quyền đánh tan quân Nam Hán trên sông Bạch Đằng</div>
-            <div class="history-century">Thế kỉ X</div>
-          </div>
-          <div class="history-card">
-            <div class="history-year">Năm 1010</div>
-            <div class="history-event">Vua Lý Thái Tổ dời đô về Thăng Long</div>
-            <div class="history-century">Thế kỉ XI</div>
-          </div>
-          <div class="history-card">
-            <div class="history-year">Năm 1288</div>
-            <div class="history-event">Chiến thắng Bạch Đằng của Trần Hưng Đạo</div>
-            <div class="history-century">Thế kỉ XIII</div>
-          </div>
-          <div class="history-card">
-            <div class="history-year">Năm 1945</div>
-            <div class="history-event">Bác Hồ đọc Tuyên ngôn Độc lập khai sinh nước VNDCCH</div>
-            <div class="history-century">Thế kỉ XX</div>
-          </div>
-          <div class="history-card">
-            <div class="history-year">Năm 1975</div>
-            <div class="history-event">Giải phóng miền Nam, thống nhất đất nước</div>
-            <div class="history-century">Thế kỉ XX</div>
+        <div class="calc-card">
+          <div class="calc-row">
+            <span>2 phút 10 giây &nbsp;</span>
+            <input type="text" class="fill-box fill-short" data-ans="=">
+            <span>&nbsp; 130 giây</span>
           </div>
         </div>
+        <div class="calc-card">
+          <div class="calc-row">
+            <span>1/2 phút &nbsp;</span>
+            <input type="text" class="fill-box fill-short" data-ans="<">
+            <span>&nbsp; 35 giây</span>
+          </div>
+        </div>
+        <div class="calc-card">
+          <div class="calc-row">
+            <span>1/4 thế kỉ &nbsp;</span>
+            <input type="text" class="fill-box fill-short" data-ans="=">
+            <span>&nbsp; 25 năm</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ======================================================== -->
+    <!-- PHẦN 4: RÈN LUYỆN 4 PHÉP TÍNH (TRỪ, NHÂN, ĐẶC BIỆT LÀ CHIA) -->
+    <!-- ======================================================== -->
+    <div class="section-box">
+      <div class="section-title-wrap">
+        <div class="sec-badge purple">➗</div>
+        <div>
+          <h2 class="sec-heading">Phần 4: Rèn Luyện 4 Phép Tính (Phạm vi 100 000)</h2>
+          <p class="sec-sub">Tập trung chuyên sâu vào Phép Trừ, Phép Nhân và <strong>ĐẶC BIỆT LÀ PHÉP CHIA</strong> (chú ý chữ số 0 ở thương và phép chia có dư)</p>
+        </div>
       </div>
 
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 3: MÁY CHUYỂN ĐỔI & TRA CỨU MINI       -->
-    <!-- ========================================== -->
-    <section id="tools-tab" class="tab-content" style="display: none;">
-      
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-blue">🧮</div>
-          <div>
-            <h2 class="section-title">Góc Trải Nghiệm & Máy Tính Chuyển Đổi Nhanh</h2>
-            <p class="section-subtitle">Tự nhập số để xem máy đổi đơn vị và giải thích từng bước nhé!</p>
-          </div>
-        </div>
-
-        <div class="tool-grid">
+      <!-- NHÓM 1: PHÉP CHIA HẾT (CHÚ Ý CHỮ SỐ 0 Ở THƯƠNG) -->
+      <div class="unit-group" style="background:#faf5ff; border-color:#d8b4fe;">
+        <div class="unit-group-title" style="color:#6b21a8;">🌟 Nhóm 1: Phép chia hết (Em hãy cẩn thận với chữ số 0 xuất hiện ở thương nhé!)</div>
+        <div class="calc-grid">
           
-          <!-- CÔNG CỤ 1: TRA THẾ KỈ -->
-          <div class="tool-card">
-            <div class="tool-title">🏛️ Tra cứu Năm ➔ Thế kỉ</div>
-            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px;">Nhập năm bất kì (năm sinh của em, năm lịch sử...):</p>
-            <div class="tool-input-group">
-              <input type="number" id="input-year" class="tool-input" placeholder="Ví dụ: 2024" value="2024" min="1" max="9999">
-              <button class="tool-btn" onclick="calcCentury()">Tra cứu</button>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>1) 48 624 : 6 = </span>
+              <input type="text" class="fill-box" data-ans="8104">
             </div>
-            <div id="result-year" class="tool-result">
-              Năm 2024 thuộc <strong>thế kỉ XXI</strong> (20 + 1 = 21).
-            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">Gợi ý: 48:6=8, hạ 6:6=1, hạ 2:6=0!</span>
           </div>
 
-          <!-- CÔNG CỤ 2: ĐỔI KHỐI LƯỢNG -->
-          <div class="tool-card">
-            <div class="tool-title">⚖️ Đổi Khối Lượng sang kg</div>
-            <div class="tool-input-group">
-              <input type="number" id="input-mass-val" class="tool-input" placeholder="Số lượng" value="5" min="0">
-              <select id="input-mass-unit" class="tool-select">
-                <option value="tan">Tấn</option>
-                <option value="ta">Tạ</option>
-                <option value="yen">Yến</option>
-              </select>
-              <button class="tool-btn" onclick="calcMass()">Đổi</button>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>2) 94 815 : 3 = </span>
+              <input type="text" class="fill-box" data-ans="31605">
             </div>
-            <div id="result-mass" class="tool-result">
-              5 tấn = <strong>5 000 kg</strong> (vì 1 tấn = 1 000 kg)
-            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">Gợi ý: Hạ 1 không chia được cho 3 thì viết 0 vào thương!</span>
           </div>
 
-          <!-- CÔNG CỤ 3: ĐỔI DIỆN TÍCH -->
-          <div class="tool-card">
-            <div class="tool-title">📐 Đổi Diện Tích</div>
-            <div class="tool-input-group">
-              <input type="number" id="input-area-val" class="tool-input" placeholder="Số m²" value="3" min="0">
-              <select id="input-area-target" class="tool-select">
-                <option value="dm2">➔ dm²</option>
-                <option value="cm2">➔ cm²</option>
-              </select>
-              <button class="tool-btn" onclick="calcArea()">Đổi</button>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>3) 86 472 : 8 = </span>
+              <input type="text" class="fill-box" data-ans="10809">
             </div>
-            <div id="result-area" class="tool-result">
-              3 m² = <strong>300 dm²</strong> (vì 1 m² = 100 dm²)
-            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">Gợi ý: 8:8=1, hạ 6:8=0...</span>
           </div>
 
-          <!-- CÔNG CỤ 4: ĐỔI THỜI GIAN PHÚT SANG GIÂY -->
-          <div class="tool-card">
-            <div class="tool-title">⏱️ Đổi Thời Gian (Phút ➔ Giây)</div>
-            <div class="tool-input-group">
-              <input type="number" id="input-time-min" class="tool-input" placeholder="Phút" value="2" min="0">
-              <input type="number" id="input-time-sec" class="tool-input" placeholder="Giây" value="30" min="0">
-              <button class="tool-btn" onclick="calcTime()">Tính</button>
-            </div>
-            <div id="result-time" class="tool-result">
-              2 phút 30 giây = <strong>150 giây</strong> (2 × 60 + 30)
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>4) 75 845 : 5 = </span>
+              <input type="text" class="fill-box" data-ans="15169">
             </div>
           </div>
 
         </div>
       </div>
 
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 4: PHIẾU BÀI TẬP TỰ LUYỆN              -->
-    <!-- ========================================== -->
-    <section id="exercises-tab" class="tab-content" style="display: none;">
-      
-      <!-- PHẦN A: TRẮC NGHIỆM -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-blue">🎯</div>
-          <div>
-            <h2 class="section-title">Phần 1: Trắc Nghiệm Khách Quan (Chọn 1 đáp án đúng nhất)</h2>
-            <p class="section-subtitle">Khoanh tròn vào chữ cái đặt trước câu trả lời đúng</p>
-          </div>
-        </div>
-
-        <div class="exercise-block" id="mc-container">
+      <!-- NHÓM 2: PHÉP CHIA CÓ DƯ -->
+      <div class="unit-group" style="background:#fff7ed; border-color:#fdba74;">
+        <div class="unit-group-title" style="color:#c2410c;">🌟 Nhóm 2: Phép chia có dư (Điền số thương và số dư tương ứng)</div>
+        <div class="calc-grid">
           
-          <!-- Câu 1 -->
-          <div class="q-item" data-q="mc1" data-ans="B">
-            <div class="q-title"><span class="q-num">Câu 1</span> 1 tạ bằng bao nhiêu ki-lô-gam?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc1" value="A"> A. 10 kg</label>
-              <label class="option-label"><input type="radio" name="mc1" value="B"> B. 100 kg</label>
-              <label class="option-label"><input type="radio" name="mc1" value="C"> C. 1 000 kg</label>
-              <label class="option-label"><input type="radio" name="mc1" value="D"> D. 10 000 kg</label>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>5) 35 487 : 4 = </span>
+              <span>Thương</span>
+              <input type="text" class="fill-box" data-ans="8871" style="width:90px;">
+              <span>, Dư</span>
+              <input type="text" class="fill-box fill-short" data-ans="3">
             </div>
-            <div class="feedback-box"></div>
           </div>
 
-          <!-- Câu 2 -->
-          <div class="q-item" data-q="mc2" data-ans="C">
-            <div class="q-title"><span class="q-num">Câu 2</span> Con voi nặng khoảng 4 tấn. Vậy con voi đó nặng bao nhiêu tạ?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc2" value="A"> A. 4 tạ</label>
-              <label class="option-label"><input type="radio" name="mc2" value="B"> B. 400 tạ</label>
-              <label class="option-label"><input type="radio" name="mc2" value="C"> C. 40 tạ</label>
-              <label class="option-label"><input type="radio" name="mc2" value="D"> D. 4 000 tạ</label>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>6) 52 916 : 7 = </span>
+              <span>Thương</span>
+              <input type="text" class="fill-box" data-ans="7559" style="width:90px;">
+              <span>, Dư</span>
+              <input type="text" class="fill-box fill-short" data-ans="3">
             </div>
-            <div class="feedback-box"></div>
           </div>
 
-          <!-- Câu 3 -->
-          <div class="q-item" data-q="mc3" data-ans="A">
-            <div class="q-title"><span class="q-num">Câu 3</span> Hai đơn vị đo diện tích liền kề gấp hoặc kém nhau bao nhiêu lần?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc3" value="A"> A. 100 lần</label>
-              <label class="option-label"><input type="radio" name="mc3" value="B"> B. 10 lần</label>
-              <label class="option-label"><input type="radio" name="mc3" value="C"> C. 1 000 lần</label>
-              <label class="option-label"><input type="radio" name="mc3" value="D"> D. 60 lần</label>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>7) 64 329 : 5 = </span>
+              <span>Thương</span>
+              <input type="text" class="fill-box" data-ans="12865" style="width:90px;">
+              <span>, Dư</span>
+              <input type="text" class="fill-box fill-short" data-ans="4">
             </div>
-            <div class="feedback-box"></div>
-          </div>
-
-          <!-- Câu 4 -->
-          <div class="q-item" data-q="mc4" data-ans="B">
-            <div class="q-title"><span class="q-num">Câu 4</span> 1 m² bằng bao nhiêu đề-xi-mét vuông (dm²)?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc4" value="A"> A. 10 dm²</label>
-              <label class="option-label"><input type="radio" name="mc4" value="B"> B. 100 dm²</label>
-              <label class="option-label"><input type="radio" name="mc4" value="C"> C. 1 000 dm²</label>
-              <label class="option-label"><input type="radio" name="mc4" value="D"> D. 10 000 dm²</label>
-            </div>
-            <div class="feedback-box"></div>
-          </div>
-
-          <!-- Câu 5 -->
-          <div class="q-item" data-q="mc5" data-ans="D">
-            <div class="q-title"><span class="q-num">Câu 5</span> 1 thế kỉ gồm có bao nhiêu năm?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc5" value="A"> A. 10 năm</label>
-              <label class="option-label"><input type="radio" name="mc5" value="B"> B. 50 năm</label>
-              <label class="option-label"><input type="radio" name="mc5" value="C"> C. 365 năm</label>
-              <label class="option-label"><input type="radio" name="mc5" value="D"> D. 100 năm</label>
-            </div>
-            <div class="feedback-box"></div>
-          </div>
-
-          <!-- Câu 6 -->
-          <div class="q-item" data-q="mc6" data-ans="C">
-            <div class="q-title"><span class="q-num">Câu 6</span> Năm 1010, vua Lý Thái Tổ dời đô về Thăng Long. Năm đó thuộc thế kỉ nào?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc6" value="A"> A. Thế kỉ IX</label>
-              <label class="option-label"><input type="radio" name="mc6" value="B"> B. Thế kỉ X</label>
-              <label class="option-label"><input type="radio" name="mc6" value="C"> C. Thế kỉ XI</label>
-              <label class="option-label"><input type="radio" name="mc6" value="D"> D. Thế kỉ XII</label>
-            </div>
-            <div class="feedback-box"></div>
-          </div>
-
-          <!-- Câu 7 -->
-          <div class="q-item" data-q="mc7" data-ans="A">
-            <div class="q-title"><span class="q-num">Câu 7</span> Bạn Nam chạy 100 m hết 18 giây, bạn An chạy hết 1/3 phút. Hỏi bạn nào chạy nhanh hơn?</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc7" value="A"> A. Bạn Nam chạy nhanh hơn</label>
-              <label class="option-label"><input type="radio" name="mc7" value="B"> B. Bạn An chạy nhanh hơn</label>
-              <label class="option-label"><input type="radio" name="mc7" value="C"> C. Hai bạn chạy bằng nhau</label>
-              <label class="option-label"><input type="radio" name="mc7" value="D"> D. Không so sánh được</label>
-            </div>
-            <div class="feedback-box"></div>
-          </div>
-
-          <!-- Câu 8 -->
-          <div class="q-item" data-q="mc8" data-ans="B">
-            <div class="q-title"><span class="q-num">Câu 8</span> Điền số thích hợp: 5 dm² 8 cm² = ... cm²</div>
-            <div class="options-grid">
-              <label class="option-label"><input type="radio" name="mc8" value="A"> A. 58 cm²</label>
-              <label class="option-label"><input type="radio" name="mc8" value="B"> B. 508 cm²</label>
-              <label class="option-label"><input type="radio" name="mc8" value="C"> C. 580 cm²</label>
-              <label class="option-label"><input type="radio" name="mc8" value="D"> D. 5008 cm²</label>
-            </div>
-            <div class="feedback-box"></div>
           </div>
 
         </div>
       </div>
 
-      <!-- PHẦN B: ĐIỀN SỐ VÀO CHỖ CHẤM -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-green">✍️</div>
-          <div>
-            <h2 class="section-title">Phần 2: Điền Số Thích Hợp Vào Chỗ Chấm</h2>
-            <p class="section-subtitle">Luyện tập đổi đơn vị đơn và đơn vị phức hợp</p>
-          </div>
-        </div>
-
-        <div class="exercise-block">
+      <!-- NHÓM 3: PHÉP TRỪ & PHÉP NHÂN -->
+      <div class="unit-group">
+        <div class="unit-group-title">🌟 Nhóm 3: Phép trừ có nhớ và phép nhân nhiều chữ số</div>
+        <div class="calc-grid">
           
-          <div style="font-weight: 800; color: #b45309; margin: 12px 0 6px;">a) Đơn vị đo khối lượng:</div>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>8) 84 520 - 36 285 = </span>
+              <input type="text" class="fill-box" data-ans="48235">
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>9) 90 000 - 24 570 = </span>
+              <input type="text" class="fill-box" data-ans="65430">
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>10) 14 218 × 4 = </span>
+              <input type="text" class="fill-box" data-ans="56872">
+            </div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>11) 16 085 × 5 = </span>
+              <input type="text" class="fill-box" data-ans="80425">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- NHÓM 4: BIỂU THỨC KẾT HỢP -->
+      <div class="unit-group" style="background:#f0fdf4; border-color:#86efac;">
+        <div class="unit-group-title" style="color:#166534;">🌟 Nhóm 4: Tính giá trị biểu thức (Quy tắc: Nhân/Chia trước, Cộng/Trừ sau)</div>
+        <div class="calc-grid">
           
-          <div class="fill-group">
-            <span>• 3 yến = </span>
-            <input type="text" class="fill-input" data-ans="30">
-            <span>kg</span>
-            <span style="margin-left: 24px;">• 5 tạ = </span>
-            <input type="text" class="fill-input" data-ans="500">
-            <span>kg</span>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>12) 65 000 - 45 000 : 5 = </span>
+              <input type="text" class="fill-box" data-ans="56000">
+            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">(Tính 45 000 : 5 trước, rồi lấy 65 000 trừ đi)</span>
           </div>
 
-          <div class="fill-group">
-            <span>• 4 tấn = </span>
-            <input type="text" class="fill-input" data-ans="40">
-            <span>tạ = </span>
-            <input type="text" class="fill-input" data-ans="4000">
-            <span>kg</span>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>13) 12 350 × 6 - 40 280 = </span>
+              <input type="text" class="fill-box" data-ans="33820">
+            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">(Tính phép nhân trước, rồi thực hiện phép trừ)</span>
           </div>
 
-          <div class="fill-group">
-            <span>• 2 tạ 35 kg = </span>
-            <input type="text" class="fill-input" data-ans="235">
-            <span>kg</span>
-            <span style="margin-left: 24px;">• 3 tấn 50 kg = </span>
-            <input type="text" class="fill-input" data-ans="3050">
-            <span>kg</span>
-          </div>
-
-          <div style="font-weight: 800; color: #047857; margin: 18px 0 6px;">b) Đơn vị đo diện tích & độ dài:</div>
-
-          <div class="fill-group">
-            <span>• 6 m² = </span>
-            <input type="text" class="fill-input" data-ans="600">
-            <span>dm²</span>
-            <span style="margin-left: 24px;">• 4 dm² = </span>
-            <input type="text" class="fill-input" data-ans="400">
-            <span>cm²</span>
-          </div>
-
-          <div class="fill-group">
-            <span>• 3 cm² 15 mm² = </span>
-            <input type="text" class="fill-input" data-ans="315">
-            <span>mm²</span>
-            <span style="margin-left: 24px;">• 7 m² 6 dm² = </span>
-            <input type="text" class="fill-input" data-ans="706">
-            <span>dm²</span>
-          </div>
-
-          <div class="fill-group">
-            <span>• 5 m 8 cm = </span>
-            <input type="text" class="fill-input" data-ans="508">
-            <span>cm</span>
-            <span style="margin-left: 24px;">• 12 km = </span>
-            <input type="text" class="fill-input" data-ans="12000">
-            <span>m</span>
-          </div>
-
-          <div style="font-weight: 800; color: #6d28d9; margin: 18px 0 6px;">c) Đơn vị thời gian (Giây & Thế kỉ):</div>
-
-          <div class="fill-group">
-            <span>• 2 phút = </span>
-            <input type="text" class="fill-input" data-ans="120">
-            <span>giây</span>
-            <span style="margin-left: 24px;">• 1 phút 15 giây = </span>
-            <input type="text" class="fill-input" data-ans="75">
-            <span>giây</span>
-          </div>
-
-          <div class="fill-group">
-            <span>• 3 thế kỉ = </span>
-            <input type="text" class="fill-input" data-ans="300">
-            <span>năm</span>
-            <span style="margin-left: 24px;">• 1/4 thế kỉ = </span>
-            <input type="text" class="fill-input" data-ans="25">
-            <span>năm</span>
+          <div class="calc-card">
+            <div class="calc-row">
+              <span>14) 84 000 : 4 : 2 = </span>
+              <input type="text" class="fill-box" data-ans="10500">
+            </div>
+            <span style="font-size:0.82rem; color:#64748b; margin-top:4px;">(Thực hiện lần lượt từ trái sang phải)</span>
           </div>
 
         </div>
       </div>
 
-      <!-- PHẦN C: SO SÁNH (>, <, =) -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-amber">⚖️</div>
-          <div>
-            <h2 class="section-title">Phần 3: Điền Dấu ( &gt; , &lt; , = ) Thích Hợp</h2>
-            <p class="section-subtitle">Đưa về cùng một đơn vị đo trước khi so sánh</p>
-          </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- PHẦN 5: BÀI TOÁN CÓ LỜI VĂN THỰC TẾ (CHỈ NHẬP ĐÁP SỐ)     -->
+    <!-- ======================================================== -->
+    <div class="section-box">
+      <div class="section-title-wrap">
+        <div class="sec-badge rose">💡</div>
+        <div>
+          <h2 class="sec-heading">Phần 5: Bài Toán Có Lời Văn Thực Tế</h2>
+          <p class="sec-sub">Thầy cô đã ghi sẵn các bước giải và đơn vị, em hãy tính toán cẩn thận và <strong>chỉ cần nhập đáp số</strong> vào ô trống!</p>
         </div>
+      </div>
 
-        <div class="exercise-block">
-          <div class="fill-group">
-            <span>1) 4 tấn 5 tạ &nbsp;</span>
-            <input type="text" class="fill-input" data-ans="=" style="width: 60px;">
-            <span>&nbsp; 45 tạ</span>
-            <span style="color:#64748b; font-size:0.9rem; margin-left: 12px;">(4 tấn = 40 tạ; 40 + 5 = 45 tạ)</span>
-          </div>
-
-          <div class="fill-group">
-            <span>2) 2 m² 50 dm² &nbsp;</span>
-            <input type="text" class="fill-input" data-ans="<" style="width: 60px;">
-            <span>&nbsp; 260 dm²</span>
-            <span style="color:#64748b; font-size:0.9rem; margin-left: 12px;">(2 m² = 200 dm² ➔ 250 dm² &lt; 260 dm²)</span>
-          </div>
-
-          <div class="fill-group">
-            <span>3) 1 phút 40 giây &nbsp;</span>
-            <input type="text" class="fill-input" data-ans=">" style="width: 60px;">
-            <span>&nbsp; 90 giây</span>
-            <span style="color:#64748b; font-size:0.9rem; margin-left: 12px;">(1 phút 40 giây = 100 giây &gt; 90 giây)</span>
-          </div>
-
-          <div class="fill-group">
-            <span>4) 1/2 thế kỉ &nbsp;</span>
-            <input type="text" class="fill-input" data-ans="=" style="width: 60px;">
-            <span>&nbsp; 50 năm</span>
-            <span style="color:#64748b; font-size:0.9rem; margin-left: 12px;">(100 : 2 = 50 năm)</span>
+      <!-- Bài 1 -->
+      <div class="word-problem">
+        <div class="wp-header">
+          <strong>Bài toán 1 (Khối lượng & Phép chia):</strong> Một kho gạo có 8 tấn 5 tạ gạo. Ngày thứ nhất kho xuất đi 25 tạ gạo. 
+          Số gạo còn lại được chia đều vào 6 xe tải để chở đến các siêu thị. Hỏi mỗi xe tải chở được bao nhiêu tạ gạo?
+        </div>
+        <div class="wp-solution-block">
+          <div class="wp-step"><strong>Bài giải mẫu:</strong></div>
+          <div class="wp-step">• Đổi: 8 tấn 5 tạ = 85 tạ</div>
+          <div class="wp-step">• Số tạ gạo còn lại sau ngày thứ nhất là: 85 - 25 = 60 (tạ)</div>
+          <div class="wp-step">• Mỗi xe tải chở được số tạ gạo là: 60 : 6 = ... (tạ)</div>
+          <div class="wp-final-row">
+            <span>👉 Đáp số mỗi xe tải chở được:</span>
+            <input type="text" class="fill-box" data-ans="10">
+            <span>tạ gạo.</span>
           </div>
         </div>
       </div>
 
-      <!-- PHẦN D: BÀI TOÁN CÓ LỜI VĂN THỰC TẾ -->
-      <div class="section-card">
-        <div class="section-header">
-          <div class="section-icon icon-rose">💡</div>
-          <div>
-            <h2 class="section-title">Phần 4: Bài Toán Có Lời Văn Thực Tế</h2>
-            <p class="section-subtitle">Giải toán gắn liền với đời sống (Đặc trưng sách Kết Nối Tri Thức)</p>
+      <!-- Bài 2 -->
+      <div class="word-problem">
+        <div class="wp-header">
+          <strong>Bài toán 2 (Diện tích & Phép chia):</strong> Một hội trường hình chữ nhật có chiều dài 15 m và chiều rộng 8 m. 
+          Người ta dùng các viên gạch men hình vuông có diện tích 25 dm² để lát kín nền hội trường đó. Hỏi cần dùng tất cả bao nhiêu viên gạch men?
+        </div>
+        <div class="wp-solution-block">
+          <div class="wp-step"><strong>Bài giải mẫu:</strong></div>
+          <div class="wp-step">• Diện tích nền hội trường là: 15 × 8 = 120 (m²)</div>
+          <div class="wp-step">• Đổi diện tích ra đề-xi-mét vuông: 120 m² = 12 000 dm²</div>
+          <div class="wp-step">• Số viên gạch men cần dùng là: 12 000 : 25 = ... (viên gạch)</div>
+          <div class="wp-final-row">
+            <span>👉 Đáp số số viên gạch cần dùng:</span>
+            <input type="text" class="fill-box" data-ans="480">
+            <span>viên gạch.</span>
           </div>
         </div>
-
-        <!-- Bài 1 -->
-        <div class="problem-box">
-          <div class="problem-content">
-            <strong>Bài toán 1 (Khối lượng):</strong> Một xe tải lớn chở được 5 tấn hàng. Xe tải nhỏ chở được 15 tạ hàng. 
-            Hỏi xe tải lớn chở được nhiều hơn xe tải nhỏ bao nhiêu tạ hàng?
-          </div>
-          <button class="solution-btn" onclick="toggleSolution('sol-1')">🔍 Xem Hướng Dẫn & Lời Giải</button>
-          <div id="sol-1" class="solution-content">
-            <strong>Bài giải:</strong><br>
-            Đổi: 5 tấn = 50 tạ.<br>
-            Xe tải lớn chở được nhiều hơn xe tải nhỏ số tạ hàng là:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;50 - 15 = 35 (tạ)<br>
-            <em>Đáp số:</em> 35 tạ hàng.
-          </div>
-        </div>
-
-        <!-- Bài 2 -->
-        <div class="problem-box">
-          <div class="problem-content">
-            <strong>Bài toán 2 (Diện tích):</strong> Một căn phòng học hình chữ nhật có chiều dài 8 m và chiều rộng 6 m. 
-            Người ta lát nền phòng học bằng các viên gạch men hình vuông có diện tích mỗi viên là 16 dm².<br>
-            a) Tính diện tích phòng học đó ra mét vuông và đề-xi-mét vuông.<br>
-            b) Cần bao nhiêu viên gạch men để lát kín nền phòng học đó?
-          </div>
-          <button class="solution-btn" onclick="toggleSolution('sol-2')">🔍 Xem Hướng Dẫn & Lời Giải</button>
-          <div id="sol-2" class="solution-content">
-            <strong>Bài giải:</strong><br>
-            a) Diện tích phòng học hình chữ nhật là:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;8 × 6 = 48 (m²)<br>
-            Đổi: 48 m² = 4 800 dm².<br>
-            b) Số viên gạch men cần để lát kín nền phòng học là:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;4 800 : 16 = 300 (viên gạch)<br>
-            <em>Đáp số:</em> a) 48 m² (hay 4 800 dm²); b) 300 viên gạch.
-          </div>
-        </div>
-
-        <!-- Bài 3 -->
-        <div class="problem-box">
-          <div class="problem-content">
-            <strong>Bài toán 3 (Thời gian - Thế kỉ):</strong> Bác Hồ sinh năm 1890 và ra đi tìm đường cứu nước năm 1911.<br>
-            a) Năm Bác Hồ sinh thuộc thế kỉ nào?<br>
-            b) Năm Bác Hồ ra đi tìm đường cứu nước thuộc thế kỉ nào?<br>
-            c) Đến năm 2026 này, đã kỉ niệm bao nhiêu năm ngày Bác ra đi tìm đường cứu nước?
-          </div>
-          <button class="solution-btn" onclick="toggleSolution('sol-3')">🔍 Xem Hướng Dẫn & Lời Giải</button>
-          <div id="sol-3" class="solution-content">
-            <strong>Bài giải:</strong><br>
-            a) Năm 1890: Ta có 18 + 1 = 19. Vậy Bác Hồ sinh vào <strong>thế kỉ XIX</strong>.<br>
-            b) Năm 1911: Ta có 19 + 1 = 20. Vậy năm Bác Hồ ra đi tìm đường cứu nước thuộc <strong>thế kỉ XX</strong>.<br>
-            c) Đến năm 2026, số năm kỉ niệm ngày Bác ra đi tìm đường cứu nước là:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;2026 - 1911 = 115 (năm).<br>
-            <em>Đáp số:</em> a) Thế kỉ XIX; b) Thế kỉ XX; c) 115 năm.
-          </div>
-        </div>
-
       </div>
 
-    </section>
+      <!-- Bài 3 -->
+      <div class="word-problem">
+        <div class="wp-header">
+          <strong>Bài toán 3 (Rút về đơn vị - Chia & Nhân):</strong> Một xưởng may nhận đơn hàng may 14 560 chiếc áo đồng phục. 
+          Theo kế hoạch, phân xưởng sẽ may đều số áo đó trong 8 ngày. Hỏi trong 5 ngày đầu tiên, phân xưởng đã may được bao nhiêu chiếc áo?
+        </div>
+        <div class="wp-solution-block">
+          <div class="wp-step"><strong>Bài giải mẫu:</strong></div>
+          <div class="wp-step">• Trong 1 ngày phân xưởng may được số chiếc áo là: 14 560 : 8 = 1 820 (chiếc áo)</div>
+          <div class="wp-step">• Trong 5 ngày đầu tiên phân xưởng may được số chiếc áo là: 1 820 × 5 = ... (chiếc áo)</div>
+          <div class="wp-final-row">
+            <span>👉 Đáp số số chiếc áo may được:</span>
+            <input type="text" class="fill-box" data-ans="9100">
+            <span>chiếc áo.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bài 4 -->
+      <div class="word-problem">
+        <div class="wp-header">
+          <strong>Bài toán 4 (Thời gian - Thế kỉ & Giây):</strong>
+        </div>
+        <div class="wp-solution-block">
+          <div class="wp-step">
+            <strong>a)</strong> Năm 1428, Lê Lợi lên ngôi hoàng đế, mở đầu thời kì Hậu Lê. Năm 1428 có hai chữ số cuối là 28 (khác 00), ta lấy 14 + 1 = 15.
+            <div class="wp-final-row" style="margin-top: 6px;">
+              <span>👉 Năm 1428 thuộc thế kỉ (viết bằng chữ số La Mã):</span>
+              <input type="text" class="fill-box" data-ans="XV" style="width: 80px;">
+            </div>
+          </div>
+          <div class="wp-step" style="margin-top: 14px;">
+            <strong>b)</strong> Bác An đi bộ tập thể dục một vòng quanh bờ hồ hết 12 phút 40 giây. Biết 12 phút = 12 × 60 = 720 giây.
+            <div class="wp-final-row" style="margin-top: 6px;">
+              <span>👉 Thời gian bác An đi bộ một vòng quanh hồ là (720 + 40):</span>
+              <input type="text" class="fill-box" data-ans="760">
+              <span>giây.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </main>
 
-  <!-- ACTION BAR (STATIONARY / BOTTOM) -->
-  <div class="action-bar" id="score-bar">
-    <div class="score-badge">
-      Kết quả: <span id="user-score">0 / 26</span>
+  <!-- ACTION BAR -->
+  <div class="action-bar">
+    <div class="score-view">
+      Điểm số: <span id="score-display">0 / 44</span>
     </div>
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
-      <button class="btn btn-primary" onclick="gradeAll()">
+      <button class="btn btn-submit" onclick="submitExam()">
         <span>✔️</span> Nộp Bài & Chấm Điểm
       </button>
-      <button class="btn btn-secondary" onclick="resetAll()">
+      <button class="btn btn-reset" onclick="resetExam()">
         <span>🔄</span> Làm Lại Từ Đầu
       </button>
       <button class="btn btn-print" onclick="window.print()">
@@ -1516,188 +1049,80 @@
   </div>
 
   <script>
-    // Tab Switching
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      
-      const target = document.getElementById(tabId);
-      if (target) target.style.display = 'block';
-
-      const buttons = document.querySelectorAll('.tab-btn');
-      if (tabId === 'theory-tab') buttons[0].classList.add('active');
-      else if (tabId === 'time-tab') buttons[1].classList.add('active');
-      else if (tabId === 'tools-tab') buttons[2].classList.add('active');
-      else if (tabId === 'exercises-tab') buttons[3].classList.add('active');
-
-      window.scrollTo({ top: 120, behavior: 'smooth' });
-    }
-
-    // Roman numeral conversion (1-30)
-    function toRoman(num) {
-      const romanMap = [
-        { val: 10, sym: 'X' }, { val: 9, sym: 'IX' }, { val: 5, sym: 'V' },
-        { val: 4, sym: 'IV' }, { val: 1, sym: 'I' }
-      ];
-      let res = '';
-      for (const item of romanMap) {
-        while (num >= item.val) {
-          res += item.sym;
-          num -= item.val;
-        }
-      }
-      return res;
-    }
-
-    // Interactive Converter: Year to Century
-    function calcCentury() {
-      const input = document.getElementById('input-year');
-      const val = parseInt(input.value);
-      const resEl = document.getElementById('result-year');
-      if (isNaN(val) || val <= 0) {
-        resEl.innerHTML = '<span style="color:#ef4444;">Vui lòng nhập năm dương lịch hợp lệ (> 0)!</span>';
-        return;
-      }
-      const centuryNum = Math.ceil(val / 100);
-      const roman = toRoman(centuryNum);
-      const endsWith00 = (val % 100 === 0);
-      let explain = endsWith00 
-        ? `Vì tận cùng là "00", lấy ${Math.floor(val/100)} chính là số thế kỉ.`
-        : `Lấy số phía trước (${Math.floor(val/100)}) cộng thêm 1 = ${centuryNum}.`;
-
-      resEl.innerHTML = `Năm <strong>${val}</strong> thuộc <strong>thế kỉ ${roman}</strong> (${explain})`;
-    }
-
-    // Mass Converter
-    function calcMass() {
-      const val = parseFloat(document.getElementById('input-mass-val').value);
-      const unit = document.getElementById('input-mass-unit').value;
-      const resEl = document.getElementById('result-mass');
-      if (isNaN(val) || val < 0) {
-        resEl.innerHTML = '<span style="color:#ef4444;">Vui lòng nhập số hợp lệ!</span>';
-        return;
-      }
-      let kg = 0;
-      let exp = '';
-      if (unit === 'tan') {
-        kg = val * 1000;
-        exp = `(vì 1 tấn = 1 000 kg)`;
-        resEl.innerHTML = `${val} tấn = <strong>${kg.toLocaleString('vi-VN')} kg</strong> ${exp}`;
-      } else if (unit === 'ta') {
-        kg = val * 100;
-        exp = `(vì 1 tạ = 100 kg)`;
-        resEl.innerHTML = `${val} tạ = <strong>${kg.toLocaleString('vi-VN')} kg</strong> ${exp}`;
-      } else if (unit === 'yen') {
-        kg = val * 10;
-        exp = `(vì 1 yến = 10 kg)`;
-        resEl.innerHTML = `${val} yến = <strong>${kg.toLocaleString('vi-VN')} kg</strong> ${exp}`;
-      }
-    }
-
-    // Area Converter
-    function calcArea() {
-      const val = parseFloat(document.getElementById('input-area-val').value);
-      const target = document.getElementById('input-area-target').value;
-      const resEl = document.getElementById('result-area');
-      if (isNaN(val) || val < 0) {
-        resEl.innerHTML = '<span style="color:#ef4444;">Vui lòng nhập số hợp lệ!</span>';
-        return;
-      }
-      if (target === 'dm2') {
-        const dm2 = val * 100;
-        resEl.innerHTML = `${val} m² = <strong>${dm2.toLocaleString('vi-VN')} dm²</strong> (vì 1 m² = 100 dm²)`;
-      } else {
-        const cm2 = val * 10000;
-        resEl.innerHTML = `${val} m² = <strong>${cm2.toLocaleString('vi-VN')} cm²</strong> (vì 1 m² = 10 000 cm²)`;
-      }
-    }
-
-    // Time Converter
-    function calcTime() {
-      const min = parseFloat(document.getElementById('input-time-min').value) || 0;
-      const sec = parseFloat(document.getElementById('input-time-sec').value) || 0;
-      const resEl = document.getElementById('result-time');
-      const totalSec = min * 60 + sec;
-      resEl.innerHTML = `${min} phút ${sec} giây = <strong>${totalSec.toLocaleString('vi-VN')} giây</strong> (${min} × 60 + ${sec})`;
-    }
-
-    // Toggle Solution
-    function toggleSolution(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.classList.toggle('show');
-      }
-    }
-
-    // Grade All Exercises
-    function gradeAll() {
+    function submitExam() {
       let score = 0;
       let total = 0;
 
-      // 1. Grade Multiple Choice
-      const mcItems = document.querySelectorAll('#mc-container .q-item');
+      // 1. Chấm Trắc nghiệm
+      const mcItems = document.querySelectorAll('#mc-group .q-item');
       mcItems.forEach(item => {
         total++;
         const qId = item.dataset.q;
-        const correctAns = item.dataset.ans;
-        const selected = item.querySelector(`input[name="${qId}"]:checked`);
+        const correct = item.dataset.ans;
+        const sel = item.querySelector(`input[name="${qId}"]:checked`);
         const fb = item.querySelector('.feedback-box');
 
-        if (selected && selected.value === correctAns) {
+        if (sel && sel.value === correct) {
           score++;
           fb.className = 'feedback-box correct';
-          fb.innerHTML = `✅ Chính xác! Tuyệt vời.`;
+          fb.innerHTML = '✅ Chính xác!';
         } else {
           fb.className = 'feedback-box wrong';
-          fb.innerHTML = `❌ Chưa đúng rồi. Đáp án chính xác là: <strong>${correctAns}</strong>.`;
+          fb.innerHTML = `❌ Chưa đúng rồi. Đáp án chính xác là: <strong>${correct}</strong>`;
         }
       });
 
-      // 2. Grade Fill-in & Comparison Inputs
-      const fillInputs = document.querySelectorAll('.fill-input');
+      // 2. Chấm tất cả các ô điền số
+      const fillInputs = document.querySelectorAll('.fill-box');
       fillInputs.forEach(input => {
         total++;
         const correct = input.dataset.ans.trim().toLowerCase();
-        const user = input.value.trim().toLowerCase();
+        // remove all commas/dots if user enters formatted numbers like 6,000 or 6.000
+        const rawUser = input.value.trim().toLowerCase();
+        const userClean = rawUser.replace(/[\s\.\,]/g, '');
+        const correctClean = correct.replace(/[\s\.\,]/g, '');
 
-        if (user === correct) {
+        if (userClean === correctClean && userClean !== '') {
           score++;
-          input.className = 'fill-input correct';
+          input.className = input.classList.contains('fill-short') ? 'fill-box fill-short correct' : 'fill-box correct';
         } else {
-          input.className = 'fill-input wrong';
-          input.title = `Đáp án đúng: ${input.dataset.ans}`;
+          input.className = input.classList.contains('fill-short') ? 'fill-box fill-short wrong' : 'fill-box wrong';
+          input.title = `Đáp án đúng là: ${input.dataset.ans}`;
         }
       });
 
-      // Update Score Display
-      const scoreBadge = document.getElementById('user-score');
-      scoreBadge.innerText = `${score} / ${total}`;
+      // Hiển thị điểm
+      const scoreEl = document.getElementById('score-display');
+      scoreEl.innerText = `${score} / ${total}`;
 
-      // Toast feedback
+      // Thông báo lời khen
       if (score === total) {
-        alert(`🌟 XUẤT SẮC! Em đạt trọn vẹn điểm tuyệt đối: ${score}/${total} điểm! 💯 Em nắm rất chắc bài!`);
-      } else if (score >= total * 0.7) {
-        alert(`👏 Rất giỏi! Em đạt ${score}/${total} điểm! Hãy xem lại những chỗ tô đỏ để khắc phục nhé!`);
+        alert(`🎉 TUYỆT VỜI! Em đạt điểm tuyệt đối ${score}/${total}! Kĩ năng tính toán và đại lượng của em rất xuất sắc! 💯`);
+      } else if (score >= total * 0.8) {
+        alert(`👏 Rất tốt! Em đạt ${score}/${total} điểm! Em hãy xem lại những ô màu đỏ để hoàn thiện bài nhé!`);
+      } else if (score >= total * 0.5) {
+        alert(`💪 Cố lên em nhé! Em đạt ${score}/${total} điểm. Hãy đặt tính ra nháp thật cẩn thận các phép chia và làm lại nhé!`);
       } else {
-        alert(`💪 Cố lên nào! Em đạt ${score}/${total} điểm. Em hãy đọc lại phần Bảng Lý Thuyết và làm lại nhé!`);
+        alert(`📖 Em đạt ${score}/${total} điểm. Em hãy xem lại bảng đổi đơn vị và cách đặt tính chia rồi thử lại nhé!`);
       }
+
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     }
 
-    // Reset All
-    function resetAll() {
-      if (confirm('Em có chắc chắn muốn làm lại từ đầu không?')) {
+    function resetExam() {
+      if (confirm('Em có chắc chắn muốn làm lại phiếu bài tập từ đầu không?')) {
         document.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
         document.querySelectorAll('.feedback-box').forEach(fb => {
           fb.style.display = 'none';
           fb.innerHTML = '';
         });
-        document.querySelectorAll('.fill-input').forEach(input => {
+        document.querySelectorAll('.fill-box').forEach(input => {
           input.value = '';
-          input.className = 'fill-input';
+          input.className = input.classList.contains('fill-short') ? 'fill-box fill-short' : 'fill-box';
           input.title = '';
         });
-        document.querySelectorAll('.solution-content').forEach(s => s.classList.remove('show'));
-        document.getElementById('user-score').innerText = '0 / 26';
+        document.getElementById('score-display').innerText = '0 / 44';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
   </script>
